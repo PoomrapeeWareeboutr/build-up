@@ -54,12 +54,12 @@ If the user token is not found, it should return BAD REQUEST status.
 
 #### Implement Test Paths
 
-|     | Test Paths            | Test Case Values                                                             | Expected Values          |
-|-----|-----------------------|------------------------------------------------------------------------------|--------------------------|
-| T1  | [1,2]                 | Token with null username                                                     | HttpStatus.BAD_REQUEST   |
-| T2  | [1,3,4]               | Token with username of non-existing account                                  | HttpStatus.BAD_REQUEST   |
-| T3  | [1,3,5,6,7,8,7,8,7,9] | Token with username of an existing account that has shipping addresses       | Addresses, HttpStatus.OK |
-| T4  | [1,3,5,6,7,9]         | Token with username of an existing account that has empty shipping addresses | Addresses, HttpStatus.OK |
+|    | Test Paths            | Test Case Values                              | Expected Values          |
+|----|-----------------------|-----------------------------------------------|--------------------------|
+| T1 | [1,2]                 | `token: null`                                 | HttpStatus.BAD_REQUEST   |
+| T2 | [1,3,4]               | `token: '${nonExistingAccountToken}'`         | HttpStatus.BAD_REQUEST   |
+| T3 | [1,3,5,6,7,8,7,8,7,9] | `token: '${existingAccount}' (has addresses)` | Addresses, HttpStatus.OK |
+| T4 | [1,3,5,6,7,9]         | `token: '${existingAccount}' (no address)`    | Addresses, HttpStatus.OK |
 
 ### Function: `AuthenticationController.auth(@RequestBody AuthRequestBody authRequestBody)`
 
@@ -81,11 +81,11 @@ it should return a new `user Token` and OK status if the authentication is succe
 
 #### Implement Test Paths
 
-|     | Test Path | Test Case Values                                   | Expected Values                       |
-|-----|-----------|----------------------------------------------------|---------------------------------------|
-| T1  | [1,2]     | `username`: badUsername, `password`: badPassword   | ErrorMessage, HttpStatus.UNAUTHORIZED |
-| T2  | [1,3,2]   | `username`: goodUsername, `password`: badPassword  | ErrorMessage, HttpStatus.UNAUTHORIZED |
-| T3  | [1,3,4]   | `username`: goodUsername, `password`: goodPassword | Token, HttpStatus.OK                  |
+|    | Test Path | Test Case Values                                                   | Expected Values                       |
+|----|-----------|--------------------------------------------------------------------|---------------------------------------|
+| T1 | [1,2]     | `username: '${wrongUsername}'`, `password: '${wrongPassword}'`     | ErrorMessage, HttpStatus.UNAUTHORIZED |
+| T2 | [1,3,2]   | `username: '${correctUsername}'`, `password: '${wrongPassword}'`   | ErrorMessage, HttpStatus.UNAUTHORIZED |
+| T3 | [1,3,4]   | `username: '${correctUsername}'`, `password: '${correctPassword}'` | Token, HttpStatus.OK                  |
 
 ### Function: `AuthenticationController.createAccount(@RequestBody Account account)`
 
@@ -109,12 +109,12 @@ Also, the API should return INTERNAL_SERVER_ERROR status if the exception occur.
 
 #### Implement Test Paths
 
-|     | Test Paths  | Test Case Values                                                    | Expected Values                  |
-|-----|-------------|---------------------------------------------------------------------|----------------------------------|
-| T1  | [1,2,4,6,3] | `username`: any && any != existingAccount.username, `password`: any | HttpStatus.INTERNAL_SERVER_ERROR |
-| T2  | [1,2,4,6,7] | `username`: any && any != existingAccount.username, `password`: any | HttpStatus.CREATED               |
-| T3  | [1,2,4,5]   | `username`: existingAccount.username, `password`: any               | HttpStatus.BAD_REQUEST           |
-| T4  | [1,2,3]     | `username`: any, `password`: any                                    | HttpStatus.INTERNAL_SERVER_ERROR |
+|    | Test Paths  | Test Case Values                                                   | Expected Values                  |
+|----|-------------|--------------------------------------------------------------------|----------------------------------|
+| T1 | [1,2,4,6,3] | `username: '${nonExistingUsername}'`, `password: '${anyPassword}'` | HttpStatus.INTERNAL_SERVER_ERROR |
+| T2 | [1,2,4,6,7] | `username: '${nonExistingUsername}'`, `password: '${anyPassword}'` | HttpStatus.CREATED               |
+| T3 | [1,2,4,5]   | `username: '${existingUsername}'`, `password: '${anyPassword}'`    | HttpStatus.BAD_REQUEST           |
+| T4 | [1,2,3]     | `username: '${anyUsername}'`, `password: '${anyPassword}'`         | HttpStatus.INTERNAL_SERVER_ERROR |
 
 ### Execute Unit Tests
 
