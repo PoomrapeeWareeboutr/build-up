@@ -24,7 +24,7 @@ We containerize our application using Docker. Thus, you can effortlessly run thi
 2. Clone this repository.
 3. Open a terminal and enter this command `docker compose up`.
 4. Wait until container initialization is finished.
-5. The Application will be running at http://localhost:3000/.
+5. The application will be running at http://localhost:3000/.
 6. Type this command in a terminal `docker compose down -v` for terminating.
 
 *Note: It may take some time to initialize services (API) for the application since it has to wait until the MySQL container completes its setup...*
@@ -172,3 +172,8 @@ After you install all of these things, you can start to execute the automated te
 ### Execute Automated UI Tests
 
 Change directory to `automated-test-cases/test-script` and execute a single test module using this command in your terminal `robot <file.robot>`. 
+
+### License
+
+Copyright (C) 2023 Thanawat Kanjanapoo, Kaewalin Limpremwattana, Pannavich Thanormvongse, Poomrapee Wareeboutr, Thanakorn Charoenritthitham, Supawit Phimonjit, and Sutthiphon Thankam - 
+All Rights Reserved You may use, distribute and modify this code under the terms of the MIT license.
