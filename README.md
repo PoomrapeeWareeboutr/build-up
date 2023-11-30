@@ -16,7 +16,7 @@ The testing phase encompasses unit testing with JUnit and the automation of UI t
 - Supawit Phimonjit ([GitHub](https://github.com/Twans99))
 - Sutthiphon Thankam
 
-## Run Demo
+## Run a Demo
 
 We containerize our application using Docker. Thus, you can effortlessly run this application anywhere by following the instructions below.
 
@@ -28,7 +28,7 @@ We containerize our application using Docker. Thus, you can effortlessly run thi
 
 *Note: It may take some time to initialize services (API) for the application since it have to wait until mysql container completes its setup...*
 
-## Unit Testing
+## Unit Testing Design (3 examples)
 
 ### Function: `ShippingAddressController.findShippingAddressByToken(@RequestBody LoginTokenDTO tokenDTO)`
 
