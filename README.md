@@ -173,7 +173,7 @@ After you install all of these things, you can start to execute the automated te
 
 Change directory to `automated-test-cases/test-script` and execute a single test module using this command in your terminal `robot <file.robot>`. 
 
-### License
+## License
 
 Copyright (C) 2023 Thanawat Kanjanapoo, Kaewalin Limpremwattana, Pannavich Thanormvongse, Poomrapee Wareeboutr, Thanakorn Charoenritthitham, Supawit Phimonjit, and Sutthiphon Thankam - 
 All Rights Reserved You may use, distribute and modify this code under the terms of the MIT license.
