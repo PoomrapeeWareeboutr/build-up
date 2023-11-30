@@ -23,10 +23,15 @@ We containerize our application using Docker. Thus, you can effortlessly run thi
 1. Install and open [Docker Desktop](https://www.docker.com/products/docker-desktop/).
 2. Clone this repository.
 3. Open a terminal and enter this command `docker compose up`.
-4. Wait until container initialization is finish.
-5. For terminating, type this command in a terminal `docker compose down -v`.
+4. Wait until container initialization is finished.
+5. The Application will be running at http://localhost:3000/.
+6. Type this command in a terminal `docker compose down -v` for terminating.
 
-*Note: It may take some time to initialize services (API) for the application since it have to wait until mysql container completes its setup...*
+*Note: It may take some time to initialize services (API) for the application since it has to wait until the MySQL container completes its setup...*
+
+## Application Preview
+
+![file](https://github.com/PoomrapeeWareeboutr/buildup-app/assets/100401430/abbb380f-8f92-46b1-a289-9d739e6f7880)
 
 ## Unit Testing Design (3 examples)
 
@@ -34,7 +39,7 @@ We containerize our application using Docker. Thus, you can effortlessly run thi
 
 #### Testing Goal
 
-The testing aims to verify that the controller API works as intended by specifying user token. it should find the addresses of the user then return addresses and OK status. 
+The testing aims to verify that the controller API works as intended by specifying a user token. it should find the addresses of the user then return addresses and OK status. 
 If the user token is not found, it should return BAD REQUEST status.
 
 #### Control Flow Graph (CFG)
@@ -91,9 +96,9 @@ it should return a new `user Token` and OK status if the authentication is succe
 
 #### Testing Goal
 
-The testing aims to verify that the controller register API works correctly by specifying the input for registration process.
-It should return CREATED status if the `username` is not duplicate on the database otherwise return BAD_REQUEST status.
-Also, the API should return INTERNAL_SERVER_ERROR status if the exception occur.
+The testing aims to verify that the controller register API works correctly by specifying the input for the registration process.
+It should return CREATED status if the `username` is not duplicated on the database otherwise return BAD_REQUEST status.
+Also, the API should return INTERNAL_SERVER_ERROR status if the exception occurs.
 
 #### Control Flow Graph (CFG)
 <img src="control-flow-graph/register_cfg.png" alt="3">
@@ -118,13 +123,13 @@ Also, the API should return INTERNAL_SERVER_ERROR status if the exception occur.
 
 ### Execute Unit Tests
 
-To run all automated unit tests, use Gradle test task (alternatively, change directory to `build-up-backend` and use `./gradlew test`), 
+To run all automated unit tests, use the Gradle test task (alternatively, change the directory to `build-up-backend` and use `./gradlew test`), 
 the task will run all test which located in `build-up-backend/src/test/java/com/gemini11/buildupbackend`.
 
 ## System Testing
 
-In system testing, we decided test cases for checking that our system meets the specified requirements (User story) or not. 
-We also do the Requirement Traceability Matrix (RTM) to match our requirements to each test case. 
+In system testing, we decided on test cases to check whether our system meets the specified requirements (User story) or not. 
+We also do the Requirement Traceability Matrix (RTM) to match our requirements for each test case. 
 Our test case has covered the user story as shown below.
 
 - User login to the system.
@@ -151,7 +156,7 @@ In automated testing, we used Robot Framework and Selenium library to write the 
 User stories that we did the automation testing are listed below.
 
 - User login to the system.
-- Buyer makes payment with credit card.
+- Buyer makes payment with a credit card.
 - Buyer makes payment with online banking.
 - User searches product by name.
 - User searches products by category.
