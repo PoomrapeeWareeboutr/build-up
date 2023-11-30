@@ -33,7 +33,7 @@ We containerize our application using Docker. Thus, you can effortlessly run thi
 
 ![file](https://github.com/PoomrapeeWareeboutr/buildup-app/assets/100401430/abbb380f-8f92-46b1-a289-9d739e6f7880)
 
-## Unit Testing Design (3 examples)
+## Unit Testing (3 examples)
 
 ### Function: `ShippingAddressController.findShippingAddressByToken(@RequestBody LoginTokenDTO tokenDTO)`
 
@@ -135,14 +135,14 @@ Our test case has covered the user story as shown below.
 - User login to the system.
 - User sign up to the system.
 - User logout from the system.
-- Seller adds fashion product.
-- Seller edits fashion product.
-- Seller deletes fashion product.
-- Buyer adds product to cart.
-- Buyer deletes product from cart.
-- Buyer edits product in cart.
-- Buyer makes payment with credit card.
-- Buyer checks out the product.
+- Seller adds a fashion product.
+- Seller edits a fashion product.
+- Seller deletes a fashion product.
+- Buyer adds product to the cart.
+- Buyer deletes product from the cart.
+- Buyer edits product in the cart.
+- Buyer makes payment with a credit card.
+- Buyer checks out products.
 - Buyer makes payment with online banking.
 - User searches product by name.
 - User searches product by category.
@@ -171,7 +171,7 @@ After you install all of these things, you can start to execute the automated te
 
 ### Execute Automated UI Tests
 
-Change directory to `automated-test-cases/test-script` and execute a single test module using this command in your terminal `robot <file.robot>`. 
+Change the directory to `automated-test-cases/test-script` and execute a single test module using this command in your terminal `robot <file.robot>`. 
 
 ## License
 
