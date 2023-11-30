@@ -1,0 +1,120 @@
+.checkout-page {
+  margin: 36px 10% 0;
+
+  &__content-body {
+    display: flex;
+    gap: 48px;
+
+    &--left,
+    &--right {
+      width: 50%;
+    }
+  }
+
+  &__ship-and-payment {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px 16px;
+    border-bottom: 1px solid #9d9d9d;
+
+    &--address-truncate {
+      width: 260px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: right;
+    }
+
+    &--icon-group {
+      align-items: center;
+      display: flex;
+      gap: 16px;
+      color: #252525;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &--info-list {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+
+      color: #9d9d9d;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    &--text-1 {
+      color: #252525;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    &--text-2 {
+      color: #00b227;
+      font-family: MontserratBold;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+
+  &__summary {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+    padding: 32px 16px;
+  }
+
+  &__button {
+    display: flex;
+    margin: 16px 0;
+    gap: 16px;
+
+    &--style-1,
+    &--style-2,
+    &--style-3 {
+      text-align: center;
+      border-radius: 8px;
+      width: 50%;
+      padding: 12px 32px;
+
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    &--style-1 {
+      border: 1px solid #9d9d9d;
+      color: #9d9d9d;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &--style-2 {
+      background: #9d9d9d;
+      color: #fff;
+    }
+
+    &--style-3 {
+      background: #00b227;
+      color: #fff;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

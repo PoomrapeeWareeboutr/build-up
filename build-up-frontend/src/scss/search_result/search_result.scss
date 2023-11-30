@@ -1,0 +1,77 @@
+.path_element {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.showcase-list {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 4rem 0;
+  gap: 16px 32px;
+}
+
+.search-title {
+  color: #252525;
+  font-family: MontserratBold;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.product-detail {
+  margin-left: 8%;
+  justify-content: center;
+}
+
+.item-slot {
+  &:hover {
+    cursor: pointer;
+    background-color: #f6f6f6;
+  }
+
+  &__pic {
+    width: 256px;
+    height: 256px;
+  }
+
+  &__text {
+    max-width: 256px;
+
+    &--name {
+      text-align: left;
+      height: 38px;
+      overflow: hidden;
+      margin: 12px 0;
+
+      color: #252525;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    &--price {
+      text-align: left;
+      color: #252525;
+      font-family: MontserratBold;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+}
+
+.search-query-text {
+  margin-top: 8px;
+
+  color: #9d9d9d;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

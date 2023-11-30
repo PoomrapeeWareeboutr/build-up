@@ -1,0 +1,47 @@
+services:
+  frontend:
+    container_name: app
+    build:
+      context: ./build-up-frontend
+    ports:
+      - "3000:3000"
+    restart: always
+    depends_on:
+      - backend
+
+  backend:
+    container_name: service
+    build:
+      context: ./build-up-backend
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:mysql://db:3306/build_up_db"
+      SPRING_DATASOURCE_USERNAME: "root"
+      SPRING_DATASOURCE_PASSWORD: "password"
+      SPRING_SQL_INIT_MODE: "always"
+      SPRING_JPA_DEFER_DATASOURCE_INITIALIZATION: "true"
+      SPRING_DATASOURCE_DATA: "file:./app/data.sql"
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    networks:
+      - services_network
+
+  mysql:
+    container_name: db
+    image: mysql
+    command: --sql_mode="" --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: "build_up_db"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "password"
+      MYSQL_ROOT_PASSWORD: "password"
+    restart: always
+    ports:
+      - "3307:3306"
+    networks:
+      - services_network
+
+networks:
+  services_network:

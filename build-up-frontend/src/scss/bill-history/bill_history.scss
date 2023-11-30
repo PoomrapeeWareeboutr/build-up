@@ -1,0 +1,65 @@
+.order-list {
+  display: flex;
+  gap: 48px;
+  margin: 24px 0;
+
+  &__order {
+    height: 480px;
+    overflow-y: auto;
+    width: 50%;
+  }
+
+  &__each-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__each {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 12px;
+    padding: 12px;
+    border: #d9d9d9 1px solid;
+    height: 120px;
+
+    &:hover {
+      background-color: #f8f8f8;
+      cursor: pointer;
+    }
+  }
+
+  &__detail {
+    padding-top: 16px;
+    height: 480px;
+    overflow-y: auto;
+    width: 50%;
+  }
+}
+
+.order-id-text {
+  margin-bottom: 8px;
+  color: #252525;
+  font-family: MontserratBold;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.order-desc-text {
+  color: #525252;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  &__price {
+    color: #525252;
+    font-size: 14px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}

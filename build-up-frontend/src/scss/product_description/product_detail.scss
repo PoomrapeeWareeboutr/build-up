@@ -1,0 +1,75 @@
+.next-btn {
+  &--allow,
+  &:hover,
+  &:active {
+    background-color: #00b227 !important;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &--not-allow,
+  ,
+  &:hover,
+  &:active {
+    background-color: #9d9d9d !important;
+
+    &:hover {
+      cursor: default;
+    }
+  }
+}
+
+.info-header {
+  color: #252525;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.info-entry {
+  text-align: left;
+
+  color: #252525;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  &__sub-entry {
+    color: #252525;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    &--placeholder {
+      padding: 0;
+      color: #252525;
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: normal;
+
+      &:hover {
+        color: unset !important;
+      }
+    }
+
+    &--danger {
+      color: #ff3856;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e3e3e3;
+}

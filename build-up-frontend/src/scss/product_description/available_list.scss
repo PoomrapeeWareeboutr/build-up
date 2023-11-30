@@ -1,0 +1,56 @@
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__item {
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+    padding: 16px 0;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__choice-text {
+    color: #252525;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 12px;
+
+    &--cheapest {
+      @extend .product-list__choice-text;
+      color: #00b227;
+    }
+  }
+
+  &__price {
+    color: #252525;
+    font-family: MontserratBold;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__button {
+    width: 100px;
+    height: 41px;
+    border-radius: 8px;
+    background: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}

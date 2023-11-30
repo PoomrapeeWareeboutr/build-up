@@ -1,0 +1,97 @@
+svg {
+  vertical-align: unset !important;
+}
+
+.global-nav {
+  background-color: #ffffff;
+  border-bottom: #e3e3e3 solid 1px;
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 10%;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  &__left {
+    justify-content: flex-start;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &--branding-text {
+      color: #1f1f1f;
+      font-family: 'MontserratExtraBold';
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      text-decoration: none;
+    }
+  }
+
+  &__center {
+    margin-right: 16px;
+    width: 50%;
+    height: 36px;
+    border-radius: 30px;
+    border: 1.5px solid #e3e3e3;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    gap: 4px;
+  }
+
+  &__input {
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+    outline: none;
+    color: #000;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__search-icon {
+    min-width: 20px;
+    height: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__right {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    white-space: nowrap;
+
+    color: #1f1f1f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__cart-icon {
+    display: flex;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #1f1f1f;
+  }
+}

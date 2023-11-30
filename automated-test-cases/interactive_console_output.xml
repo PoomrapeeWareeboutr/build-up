@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.5 on win32)" generated="20231127 20:22:35.000" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\User\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Click Element">
+<arg>xpath=//*[@id="root"]/div/div[1]/div[1]/div/div</arg>
+<msg timestamp="20231127 20:22:35.526" level="FAIL">No keyword with name 'Click Element' found.</msg>
+<status status="FAIL" starttime="20231127 20:22:35.526" endtime="20231127 20:22:35.526"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231127 20:22:35.526" endtime="20231127 20:22:35.526"/>
+</kw>
+<kw name="Click Element">
+<arg>xpath=//*[@id="root"]/div/div[1]/div[1]/div/div/ul/li[2]</arg>
+<status status="NOT RUN" starttime="20231127 20:22:35.527" endtime="20231127 20:22:35.528"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231127 20:22:35.528" endtime="20231127 20:22:35.528"/>
+</kw>
+<kw name="Get Element Count">
+<var>${count}</var>
+<arg>class:item-slot</arg>
+<status status="NOT RUN" starttime="20231127 20:22:35.528" endtime="20231127 20:22:35.528"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${count}</arg>
+<arg>2</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" starttime="20231127 20:22:35.528" endtime="20231127 20:22:35.528"/>
+</kw>
+<status status="PASS" starttime="20231127 20:22:35.024" endtime="20231127 20:22:38.354"/>
+</kw>
+<status status="PASS" starttime="20231127 20:22:35.023" endtime="20231127 20:22:38.354"/>
+</test>
+<status status="PASS" starttime="20231127 20:22:35.002" endtime="20231127 20:22:38.355"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
