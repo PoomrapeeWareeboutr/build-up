@@ -6,6 +6,14 @@ The project centers around a web application designed for the purchase and sale 
 with a specific emphasis on shoes and shirts. It is developed using React and Spring Boot, incorporating MySQL for database functionality. 
 The testing phase encompasses unit testing with JUnit and the automation of UI testing using the Robot framework.
 
+## Objectives
+
+- Build a web-based application aligning with specified requirements and user stories.
+- Design and implement unit tests for a minimum of three methods, ensuring the resilience of the codebase.
+- Formulate manual tests to validate the features within the application.
+- Implement automated UI tests based on manual test scenarios, encompassing a minimum of three user stories to improve the application's reliability and user experience.
+- Seamlessly integrate Continuous Integration (CI) into the entire project life cycle, fostering consistency and efficiency in the development process.
+
 ## Collaborators
 
 - Thanawat Kanjanapoo ([GitHub](https://github.com/sRubyy))
@@ -15,6 +23,10 @@ The testing phase encompasses unit testing with JUnit and the automation of UI t
 - Thanakorn Charoenritthitham ([GitHub](https://github.com/tnktian))
 - Supawit Phimonjit ([GitHub](https://github.com/Twans99))
 - Sutthiphon Thankam
+
+## Application Preview
+
+![file](https://github.com/PoomrapeeWareeboutr/buildup-app/assets/100401430/abbb380f-8f92-46b1-a289-9d739e6f7880)
 
 ## Run a Demo
 
@@ -29,11 +41,7 @@ We containerize our application using Docker. Thus, you can effortlessly run thi
 
 *Note: It may take some time to initialize services (API) for the application since it has to wait until the MySQL container completes its setup...*
 
-## Application Preview
-
-![file](https://github.com/PoomrapeeWareeboutr/buildup-app/assets/100401430/abbb380f-8f92-46b1-a289-9d739e6f7880)
-
-## Unit Testing (3 examples)
+## Unit Testing
 
 ### Function: `ShippingAddressController.findShippingAddressByToken(@RequestBody LoginTokenDTO tokenDTO)`
 
